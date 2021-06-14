@@ -1,7 +1,17 @@
-import LandingPage from '../components/landingPage/LandingPage';
+import Home from "../pages/Home";
+import { Route, Switch } from "react-router";
+import { BrowserRouter } from "react-router-dom";
 
-const rutas = [
-    {path: '/', component: LandingPage, exact: true}
-]
+function Routes() {
+    return (
+        <BrowserRouter>
+            <Switch>
+                <Route  path="/" exact >
+                    <Home />
+                </Route>
+            </Switch>
+        </BrowserRouter>
+    )
+}
 
-export default rutas;
+export default Routes;
