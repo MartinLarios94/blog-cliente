@@ -43,7 +43,7 @@ function MasonryLayout({ horizontals, verticals }: MostRecentsResult) {
           image={vertical_c.image}
           tags={vertical_c.tags}
           apparence={vertical_c.apparence}
-          className="md:row-start-2 md:row-end-4 md:col-start-1 md:col-end-2 hidden md:block"
+          className="md:row-start-2 md:row-end-4 md:col-start-1 md:col-end-2 hidden md:flex"
         />}
         {vertical_d && <ImageCard
           date={vertical_d.date}
@@ -51,7 +51,7 @@ function MasonryLayout({ horizontals, verticals }: MostRecentsResult) {
           image={vertical_d.image}
           tags={vertical_d.tags}
           apparence={vertical_d.apparence}
-          className="md:row-start-2 md:row-end-4 md:col-start-2 md:col-end-3 hidden md:block"
+          className="md:row-start-2 md:row-end-4 md:col-start-2 md:col-end-3 hidden md:flex"
         />}
         {horizontal_b && <ImageCard
           date={horizontal_b.date}
@@ -59,7 +59,7 @@ function MasonryLayout({ horizontals, verticals }: MostRecentsResult) {
           image={horizontal_b.image}
           tags={horizontal_b.tags}
           apparence={horizontal_b.apparence}
-          className="md:row-start-3 md:row-end-4 md:col-start-3 md:col-end-5 hidden md:block"
+          className="md:row-start-3 md:row-end-4 md:col-start-3 md:col-end-5 hidden md:flex"
         />}
       </div>
     </>
