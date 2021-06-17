@@ -16,3 +16,8 @@ html, body, #root {
 body{
     font-family: 'Domine', serif;
 }
+
+#root {
+    display:flex; 
+    flex-direction:column; 
+}

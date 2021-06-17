@@ -31,8 +31,8 @@ function PaginationResult({ page }: PaginationResultProps) {
   }, [data]);
 
   return (
-    <section id="pagination-result" className="text-gray-600 body-font">
-      <div className="container px-5 py-24 mx-auto">
+    <section id="pagination-result" className="text-gray-600 body-font my-10">
+      <div className="container px-5 mx-auto">
         <div className="flex flex-wrap -m-4">
           {result.map((page, i: number) => (
             <ImagePagination

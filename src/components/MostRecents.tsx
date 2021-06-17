@@ -30,7 +30,7 @@ function MostRecents() {
     setRecents(parsed);
   }, [parsed]);
 
-  return <section id="most-recents" className="py-4 px-2 w-full gird place-items-center">
+  return <section id="most-recents" className="py-4 px-2 my-10 w-full gird place-items-center">
     <MasonryLayout horizontals={recents.horizontals} verticals={recents.verticals} />
   </section>;
 }

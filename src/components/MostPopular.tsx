@@ -26,7 +26,7 @@ function MostPopular() {
   }, [data]);
 
   return (
-    <section id="most-popular">
+    <section id="most-popular" className="my-10">
       {popular && (
         <ImagePopular
           Title={popular?.Title}

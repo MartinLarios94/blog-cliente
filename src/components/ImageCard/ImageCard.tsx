@@ -20,7 +20,7 @@ function ImageCard({ title, date, tags, image, apparence, className }: ImageCard
         <div className="flex w-full flex-grow-1">
           {tags.map((t, i) => (
             <div
-              className="flex-none uppercase bg-white text-black text-xs tracking-wide font-semibold px-2 py-1 rounded-md mr-3"
+              className="flex-none uppercase bg-white text-black text-xs font-poppins tracking-wide font-semibold px-2 py-1 rounded-md mr-3"
               key={i}
             >
               <span>{t}</span>
@@ -28,9 +28,9 @@ function ImageCard({ title, date, tags, image, apparence, className }: ImageCard
           ))}
         </div>
         <div className="flex-grow-2 flex flex-col justify-end">
-          <h3 className="mb-4">{title}</h3>
+          <h3 className="mb-4 font-domine font-extrabold">{title}</h3>
         </div>
-        <span className="flex-grow-1">
+        <span className="flex-grow-1 font-poppins font-medium text-sm">
           {date.toLocaleDateString("en-US", {
             month: "short",
             day: "numeric",
