@@ -36,7 +36,7 @@ function App() {
     <BrowserRouter>
       <ApolloProvider client={client}>
         <Navbar />
-        <div className="container">
+        <div className="container mx-auto">
           <Routes />
         </div>
         <Footer />
