@@ -23,7 +23,7 @@ function ImagePagination(props: BlogModel) {
               <svg
                 className="w-4 h-4 mr-1"
                 stroke="currentColor"
-                stroke-width="2"
+                strokeWidth="2"
                 fill="none"
                 stroke-linecap="round"
                 stroke-linejoin="round"
@@ -37,7 +37,7 @@ function ImagePagination(props: BlogModel) {
             <svg
               stroke="currentColor"
               fill="currentColor"
-              stroke-width="0"
+              strokeWidth="0"
               viewBox="0 0 1024 1024"
               height="1em"
               width="1em"
