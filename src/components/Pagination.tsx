@@ -32,7 +32,7 @@ function Pagination({ perPage, total, page }: PaginationProps) {
                     <li className={`cursor-pointer mx-1 px-3 py-2 text-gray-700 hover:bg-gray-700 hover:text-gray-200 rounded-lg ${page === (i + 1) && ""}`} key={i}>
                         <Link to={{
                             pathname: "/",
-                            search: `?page=${i + 1}`
+                            search: `?page=${i+1}`
                         }} className="font-poppins">{i + 1}</Link>
                     </li>
                 ))

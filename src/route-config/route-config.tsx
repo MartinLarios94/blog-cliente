@@ -2,7 +2,6 @@ import Home from "../pages/Home";
 import { Route, Switch } from "react-router";
 import PanelAdmin from '../pages/admin/PanelAdmin';
 import FormBlogs from '../pages/admin/FormBlogs';
-import Blog from '../models/blog.model';
 
 function Routes() {
   return (

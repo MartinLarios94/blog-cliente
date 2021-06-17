@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo } from "react";
+import React, { useState, useEffect } from "react";
 import { useQuery } from "@apollo/client";
 import { GET_BLOGS } from "../graphql/Queries";
 import Blog from "../models/blog.model";
@@ -13,7 +13,7 @@ function PaginationResult({ page }: PaginationResultProps) {
   const [result, setResult] = useState<Blog[]>([])
   const [total, setTotal] = useState(0);
 
-  const { error, loading, data } = useQuery(GET_BLOGS, {
+  const { data } = useQuery(GET_BLOGS, {
     variables: {
       pagination: { limit: 9, skip: (page - 1) },
     },

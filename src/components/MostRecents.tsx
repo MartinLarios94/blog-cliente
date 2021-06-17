@@ -3,11 +3,11 @@ import { useQuery } from "@apollo/client";
 import { MOST_RECENTS } from "../graphql/Queries";
 import Blog from "../models/blog.model";
 import MostRecentsResult from "../models/most-recents-result"
-import MasonryLayout from "./MasonryLayout/MasonryLayout";
+import MostPopularLayout from "./MostPopularLayout/MostPopularLayout";
 
 function MostRecents() {
   const [recents, setRecents] = useState<MostRecentsResult>({ horizontals: [], verticals: [] });
-  const { error, loading, data } = useQuery(MOST_RECENTS);
+  const {  data } = useQuery(MOST_RECENTS);
 
   const parsed = useMemo(() => {
     if (!data || !data.mostRecents) return { horizontals: [], verticals: [] };
@@ -31,7 +31,7 @@ function MostRecents() {
   }, [parsed]);
 
   return <section id="most-recents" className="py-4 px-2 my-10 w-full gird place-items-center">
-    <MasonryLayout horizontals={recents.horizontals} verticals={recents.verticals} />
+    <MostPopularLayout horizontals={recents.horizontals} verticals={recents.verticals} />
   </section>;
 }
 

@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 
 function PanelAdmin() {
   const [blogs, setBlogs] = useState<Blog[]>([]);
-  const { error, loading, data } = useQuery(GET_BLOGS);
+  const { data } = useQuery(GET_BLOGS);
 
   useEffect(() => {
     if (!data || !data.blogs) return;

@@ -1,9 +1,9 @@
 import React from "react";
 import ImageCard from "../ImageCard/ImageCard";
 import MostRecentsResult from "../../models/most-recents-result";
-import "./MasonryLayout.styles.css";
+import "./MostPopularLayout.styles.css";
 
-function MasonryLayout({ horizontals, verticals }: MostRecentsResult) {
+function MostPopularLayout({ horizontals, verticals }: MostRecentsResult) {
   const horizontal_a = horizontals[0];
   const horizontal_b = horizontals[1];
   const vertical_a = verticals[0];
@@ -66,4 +66,4 @@ function MasonryLayout({ horizontals, verticals }: MostRecentsResult) {
   );
 }
 
-export default MasonryLayout;
+export default MostPopularLayout;

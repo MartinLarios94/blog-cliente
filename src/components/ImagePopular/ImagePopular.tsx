@@ -5,7 +5,7 @@ import "./ImagePopular.styles.css";
 function ImagePopular(props: BlogModel) {
   return (
     <div className="w-full grid items-center">
-      <div className="bg-white p-4 w-full max-w-3xl mx-auto sm:p-4 h-auto flex flex-col sm:flex-row gap-5 select-none">
+      <div className="bg-white p-4 w-full max-w-6xl mx-auto sm:p-4 h-auto flex flex-col sm:flex-row gap-5 select-none">
         <div
           style={{ backgroundImage: `url("${props.Image.Content}")` }}
           className="image-card h-52 sm:h-full sm:w-72 bg-gray-100 bg-center bg-cover p-4"

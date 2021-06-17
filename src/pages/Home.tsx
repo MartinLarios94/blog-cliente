@@ -9,7 +9,7 @@ function useQuery() {
 }
 
 function Home(props: any) {
-  const [page, setPage] = useState(0);
+  const [page, setPage] = useState(1);
   const query = useQuery();
 
   useEffect(() => {
