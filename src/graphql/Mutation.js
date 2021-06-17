@@ -6,7 +6,9 @@ mutation createBlog(
       $Excerpt: String!, 
       $Author: String!, 
       $Tag: String!, 
-      $Image: BlogImage!
+      $Image: BlogImage!,
+      $Views: Int,
+      $Likes: Int
       ) {
         createBlog(blogInput: {
           Title: $Title
@@ -14,6 +16,8 @@ mutation createBlog(
           Author: $Author
           Tag: $Tag
           Image: $Image
+          Views: $Views
+          Likes: $Likes
         }) {
               _id
               Excerpt

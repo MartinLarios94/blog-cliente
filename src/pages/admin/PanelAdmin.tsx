@@ -2,16 +2,12 @@ import React, { useEffect, useState } from "react";
 import { useQuery } from "@apollo/client";
 import { GET_BLOGS } from "../../graphql/Queries";
 import Blog from "../../models/blog.model";
-import Table from "../utils/Table";
+import Table from "../../components/utils/Table";
 import { Link } from "react-router-dom";
 
 function PanelAdmin() {
   const [blogs, setBlogs] = useState<Blog[]>([]);
-  const { error, loading, data } = useQuery(GET_BLOGS, {
-    variables: {
-      pagination: { limit: 9, skip: 0 },
-    },
-  });
+  const { error, loading, data } = useQuery(GET_BLOGS);
 
   useEffect(() => {
     if (!data || !data.blogs) return;
@@ -42,9 +38,6 @@ function PanelAdmin() {
                 <div className="flex items-center justify-center">
                   Create Date
                 </div>
-              </th>
-              <th className="p-2 border-r cursor-pointer text-sm text-gray-500">
-                <div className="flex items-center justify-center">Actions</div>
               </th>
             </tr>
           </thead>
