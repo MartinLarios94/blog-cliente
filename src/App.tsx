@@ -2,14 +2,46 @@ import React from "react";
 import Routes from "./route-config/route-config";
 import Navbar from "./components/Navbar";
 import "./App.css";
+import Footer from "./components/Footer/Footer";
+
+import {
+  ApolloClient,
+  InMemoryCache,
+  ApolloProvider,
+  HttpLink,
+  from,
+} from "@apollo/client";
+
+import { onError } from "@apollo/client/link/error";
+import { BrowserRouter } from "react-router-dom";
+
+const errorLink = onError(({ graphQLErrors, networkError }) => {
+  if (graphQLErrors) {
+    graphQLErrors.map(({ message }) => console.error(`An error has occurred  ${message}`));
+  }
+});
+
+const link = from([
+  errorLink,
+  new HttpLink({ uri: "https://backend-ns-assessment.herokuapp.com/graphql" }),
+]);
+
+const client = new ApolloClient({
+  cache: new InMemoryCache(),
+  link: link,
+});
 
 function App() {
   return (
-    <>
-      <Navbar />
-      <Routes />
-      <h1>Soy gay</h1>
-    </>
+    <BrowserRouter>
+      <ApolloProvider client={client}>
+        <Navbar />
+        <div className="container">
+          <Routes />
+        </div>
+        <Footer />
+      </ApolloProvider>
+    </BrowserRouter>
   );
 }
 

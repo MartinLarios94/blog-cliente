@@ -1,17 +1,18 @@
 import Home from "../pages/Home";
 import { Route, Switch } from "react-router";
-import { BrowserRouter } from "react-router-dom";
+import PanelAdmin from '../components/admin/PanelAdmin';
 
 function Routes() {
-    return (
-        <BrowserRouter>
-            <Switch>
-                <Route  path="/" exact >
-                    <Home />
-                </Route>
-            </Switch>
-        </BrowserRouter>
-    )
+  return (
+    <Switch>
+      <Route path="/" exact>
+        <Home />
+      </Route>
+      <Route path="/admin" exact>
+        <PanelAdmin />
+      </Route>
+    </Switch>
+  );
 }
 
 export default Routes;

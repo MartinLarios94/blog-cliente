@@ -1,0 +1,14 @@
+.masonry-layout {
+  --cols: 2;
+  --col-width: 175px;
+  --row-height: 277px;
+  display: grid;
+  grid-template-columns: repeat(var(--cols), var(--col-width));
+  grid-auto-rows: var(--row-height);
+  grid-auto-flow: dense;
+  width: fit-content;
+}
+
+.masonry-layout .two-rows {
+    grid-column-end: span 2;
+}

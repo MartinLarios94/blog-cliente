@@ -1,0 +1,26 @@
+.image-card {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.image-card.vertical {
+  max-width: 175px;
+  height: 277px;
+}
+
+.image-card.horizontal {
+  max-width: 366px;
+  height: 230px;
+}
+
+@media (min-width: 768px) {
+  .image-card.vertical {
+    max-width: 318px;
+    height: 240px;
+  }
+
+  .image-card.horizontal {
+    max-width: 460px;
+  }
+}
